@@ -35,7 +35,7 @@ while playing:
                 show = ' '.join(show)
                 if show.replace(" ",'') == target:
                     print(f"Congratulation! Tries left: {count}")
-                    break
+                    playing = False
         else:
             count -= 1
             print("Incorrect!")
