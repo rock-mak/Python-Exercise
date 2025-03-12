@@ -16,7 +16,6 @@ while playing:
     count = 6
     target = random.choice(words).strip().upper()
     show = word_len(target).strip()
-    print(target)
     while count > 0:
         print(show, "  Guess chances: ", count)
         user_ = input("Guess your letter: ")
@@ -39,6 +38,8 @@ while playing:
             print(f"Chance left: {count}\nBetter luck next time!\nThe word is {target}")
     
     again = input("Do you want to play again?")
-    if "YES" or 'yes' not in input:
+    if "YES" or 'yes' in input:
+        count = 6
+    else:
         print("Thank you for playing!")
         playing = False
